@@ -4,19 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/c/oss/cmake/Help/guide/tutorial/Step5/tutorial.cxx" "/mnt/c/oss/cmake/Help/guide/tutorial/Step5_build/CMakeFiles/Tutorial.dir/tutorial.cxx.o"
+  "/mnt/c/oss/cmake/Help/guide/tutorial/Step6/tutorial.cxx" "/mnt/c/oss/step5-clean/oss-lab7-step5/CMakeFiles/Tutorial.dir/tutorial.cxx.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "."
-  "/mnt/c/oss/cmake/Help/guide/tutorial/Step5/MathFunctions"
+  "/mnt/c/oss/cmake/Help/guide/tutorial/Step6/MathFunctions"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/mnt/c/oss/cmake/Help/guide/tutorial/Step5_build/MathFunctions/CMakeFiles/MathFunctions.dir/DependInfo.cmake"
+  "/mnt/c/oss/step5-clean/oss-lab7-step5/MathFunctions/CMakeFiles/MathFunctions.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

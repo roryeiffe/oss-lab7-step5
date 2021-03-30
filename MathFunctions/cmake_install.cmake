@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/c/oss/cmake/Help/guide/tutorial/Step5/MathFunctions
+# Install script for directory: /mnt/c/oss/cmake/Help/guide/tutorial/Step6/MathFunctions
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,10 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/mnt/c/oss/cmake/Help/guide/tutorial/Step5_build/MathFunctions/libMathFunctions.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/mnt/c/oss/step5-clean/oss-lab7-step5/MathFunctions/libMathFunctions.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/mnt/c/oss/cmake/Help/guide/tutorial/Step5/MathFunctions/MathFunctions.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES "/mnt/c/oss/cmake/Help/guide/tutorial/Step6/MathFunctions/MathFunctions.h")
 endif()
 

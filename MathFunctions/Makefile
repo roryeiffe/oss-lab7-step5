@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/oss/cmake/Help/guide/tutorial/Step5
+CMAKE_SOURCE_DIR = /mnt/c/oss/cmake/Help/guide/tutorial/Step6
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build
+CMAKE_BINARY_DIR = /mnt/c/oss/step5-clean/oss-lab7-step5
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -103,8 +103,8 @@ list_install_components/fast: list_install_components
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build/CMakeFiles /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build/MathFunctions/CMakeFiles/progress.marks
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build/CMakeFiles 0
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/oss/step5-clean/oss-lab7-step5/CMakeFiles /mnt/c/oss/step5-clean/oss-lab7-step5/MathFunctions/CMakeFiles/progress.marks
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/oss/step5-clean/oss-lab7-step5/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/clean
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/preinstall
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/preinstall
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 MathFunctions/CMakeFiles/MathFunctions.dir/rule:
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/MathFunctions.dir/rule
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(MAKE) -f CMakeFiles/Makefile2 MathFunctions/CMakeFiles/MathFunctions.dir/rule
 .PHONY : MathFunctions/CMakeFiles/MathFunctions.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ MathFunctions: MathFunctions/CMakeFiles/MathFunctions.dir/rule
 
 # fast build rule for target.
 MathFunctions/fast:
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/build
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/build
 .PHONY : MathFunctions/fast
 
 mysqrt.o: mysqrt.cxx.o
@@ -188,7 +188,7 @@ mysqrt.o: mysqrt.cxx.o
 
 # target to build an object file
 mysqrt.cxx.o:
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.o
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.o
 .PHONY : mysqrt.cxx.o
 
 mysqrt.i: mysqrt.cxx.i
@@ -197,7 +197,7 @@ mysqrt.i: mysqrt.cxx.i
 
 # target to preprocess a source file
 mysqrt.cxx.i:
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.i
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.i
 .PHONY : mysqrt.cxx.i
 
 mysqrt.s: mysqrt.cxx.s
@@ -206,7 +206,7 @@ mysqrt.s: mysqrt.cxx.s
 
 # target to generate assembly for a file
 mysqrt.cxx.s:
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.s
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(MAKE) -f MathFunctions/CMakeFiles/MathFunctions.dir/build.make MathFunctions/CMakeFiles/MathFunctions.dir/mysqrt.cxx.s
 .PHONY : mysqrt.cxx.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/oss/cmake/Help/guide/tutorial/Step5_build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/oss/step5-clean/oss-lab7-step5 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
